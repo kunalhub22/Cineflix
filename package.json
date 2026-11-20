@@ -6,17 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:vinext": "vite dev --port 3001",
+    "build:vinext": "vite build",
+    "start:vinext": "vite preview",
+    "deploy:vinext": "vinext-cloudflare deploy"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
-    "next": "^14.2.25",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "stripe": "^17.7.0"
+    "@vinext/cloudflare": "^1.4.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-server-dom-webpack": "^19.3.1",
+    "stripe": "^17.7.0",
+    "vinext": "^1.4.6"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^2.0.0-rc.2",
+    "@vitejs/plugin-react": "^6.3.0",
+    "@vitejs/plugin-rsc": "^0.5.39",
+    "cf": "^1.0.0-rc.2",
     "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.25"
+    "vite": "^8.3.8"
+  },
+  "type": "module",
+  "allowScripts": {
+    "workerd@1.20261117.1": true,
+    "workerd@1.20261118.1": true
   }
 }
